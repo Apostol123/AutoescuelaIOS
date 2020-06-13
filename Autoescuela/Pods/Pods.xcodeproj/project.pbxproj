@@ -3,17 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A3B7FC49218BAF86A4FBF3E466B6C10 /* TestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B4C50F7888AEAC05EA616196C8ED71 /* TestClass.swift */; };
+		0A3B7FC49218BAF86A4FBF3E466B6C10 /* TestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD8597AF3B79D02B686D38C74B76353 /* TestClass.swift */; };
 		2B86561A2DF47A3AD1CBCC63E4552497 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		58C40BF7147592927EE72D6460E29FEA /* AutoEscuelaComponents-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AE4CE33B4D2B3E50B6139A9B9F229559 /* AutoEscuelaComponents-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58C40BF7147592927EE72D6460E29FEA /* AutoEscuelaComponents-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EE4444167606F3EC69AB6EC8B805247 /* AutoEscuelaComponents-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72C486A8356307EB242557D0491607BF /* Pods-Autoescuela-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90233173E47B1370B48C459D09134CD0 /* Pods-Autoescuela-dummy.m */; };
 		A34757AEDDD6F7B7F45E711A75909E1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		BE324840B90C1A98A23CAAF5A99C441A /* Pods-Autoescuela-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DC34F1B07BBF5DE697279BEE7C86E51E /* Pods-Autoescuela-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F23220E247FD0B08CD9C1E8A8343225F /* AutoEscuelaComponents-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F3C9D00C66D1DA3ECD7B1551043396 /* AutoEscuelaComponents-dummy.m */; };
+		F23220E247FD0B08CD9C1E8A8343225F /* AutoEscuelaComponents-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5206BF547F0D7DC6EB6C456FF7BB2F18 /* AutoEscuelaComponents-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,25 +27,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		171DB99DAE1F1AE2F522F191110514A4 /* AutoEscuelaComponents-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AutoEscuelaComponents-prefix.pch"; sourceTree = "<group>"; };
+		24CC8CE1477C34C240ADF5AF3D4B5DA2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		2C122802DA290EFFE80B6AE665F95102 /* Pods-Autoescuela-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Autoescuela-frameworks.sh"; sourceTree = "<group>"; };
-		2CD842DEEC6B58FB676CE31587E7CD81 /* AutoEscuelaComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AutoEscuelaComponents.debug.xcconfig; sourceTree = "<group>"; };
+		2EE4444167606F3EC69AB6EC8B805247 /* AutoEscuelaComponents-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AutoEscuelaComponents-umbrella.h"; sourceTree = "<group>"; };
+		311776CCDFE0A9F88B0B8421745481A0 /* AutoEscuelaComponents.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AutoEscuelaComponents.modulemap; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		40FBAB676BB64DAFEF487CA9B5DF9FE2 /* AutoEscuelaComponents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AutoEscuelaComponents.release.xcconfig; sourceTree = "<group>"; };
-		73B4C50F7888AEAC05EA616196C8ED71 /* TestClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TestClass.swift; path = Classes/TestClass.swift; sourceTree = "<group>"; };
-		7AFBCE9363B3E35A9F31364ABAE14F81 /* AutoEscuelaComponents-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AutoEscuelaComponents-Info.plist"; sourceTree = "<group>"; };
+		32612774738C2D4C922B141FC6CFDDE9 /* AutoEscuelaComponents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AutoEscuelaComponents.release.xcconfig; sourceTree = "<group>"; };
+		3309B623E7F9A471BB1E6ECCA6CA3D13 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		5206BF547F0D7DC6EB6C456FF7BB2F18 /* AutoEscuelaComponents-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AutoEscuelaComponents-dummy.m"; sourceTree = "<group>"; };
+		640D3C527E31DC61446DC0914408DBF9 /* AutoEscuelaComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AutoEscuelaComponents.debug.xcconfig; sourceTree = "<group>"; };
+		663581B3E7CBCB289D97FA12D1B14A9E /* AutoEscuelaComponents.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AutoEscuelaComponents.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7DC76559431BF1615D33BA8C12A65E0E /* Pods-Autoescuela.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Autoescuela.release.xcconfig"; sourceTree = "<group>"; };
 		842C93A6793C0A3157BCF2C2632D3543 /* AutoEscuelaComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AutoEscuelaComponents.framework; path = AutoEscuelaComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86E9906C92D92CAD62ABDE91A697ED4D /* AutoEscuelaComponents-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AutoEscuelaComponents-Info.plist"; sourceTree = "<group>"; };
 		90233173E47B1370B48C459D09134CD0 /* Pods-Autoescuela-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Autoescuela-dummy.m"; sourceTree = "<group>"; };
 		967FD7D3C27030B1755285C6831CDB6B /* Pods-Autoescuela-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Autoescuela-acknowledgements.plist"; sourceTree = "<group>"; };
 		9C6C882939A40BD7F358E8F6DF5D0FD2 /* Pods-Autoescuela-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Autoescuela-Info.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A36BD5F36771D99278A3AC9D364D5854 /* AutoEscuelaComponents-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AutoEscuelaComponents-prefix.pch"; sourceTree = "<group>"; };
-		A9CD6E54CA5FA594A5596412038B4EF7 /* AutoEscuelaComponents.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AutoEscuelaComponents.modulemap; sourceTree = "<group>"; };
-		AE4CE33B4D2B3E50B6139A9B9F229559 /* AutoEscuelaComponents-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AutoEscuelaComponents-umbrella.h"; sourceTree = "<group>"; };
+		CAD8597AF3B79D02B686D38C74B76353 /* TestClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TestClass.swift; path = Classes/TestClass.swift; sourceTree = "<group>"; };
 		D4068A2BB50928BA84D1C2C6D05627DA /* Pods_Autoescuela.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Autoescuela.framework; path = "Pods-Autoescuela.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D62040E19AFAC65CBE6587AADE6EF235 /* Pods-Autoescuela.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Autoescuela.modulemap"; sourceTree = "<group>"; };
 		DC34F1B07BBF5DE697279BEE7C86E51E /* Pods-Autoescuela-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Autoescuela-umbrella.h"; sourceTree = "<group>"; };
-		E8F3C9D00C66D1DA3ECD7B1551043396 /* AutoEscuelaComponents-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AutoEscuelaComponents-dummy.m"; sourceTree = "<group>"; };
 		FA0CF30AFDF488DE0A87127DC36AC69C /* Pods-Autoescuela.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Autoescuela.debug.xcconfig"; sourceTree = "<group>"; };
 		FFD67A395B030C5A5F641F194B93BD60 /* Pods-Autoescuela-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Autoescuela-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,14 +73,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0561B88D2A9287FB1F428F4EE328F8C6 /* AutoEscuelaComponents */ = {
+		3E49C9218671A0D4D8DFAB6DACD429D4 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				73B4C50F7888AEAC05EA616196C8ED71 /* TestClass.swift */,
-				655100770AA6ECF841404EAC7CC9E6A1 /* Support Files */,
+				A08888400B19587BD079846CB889C72B /* AutoEscuelaComponents */,
 			);
-			name = AutoEscuelaComponents;
-			path = AutoEscuelaComponents;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		40D6EE3559A351866C89E457623DE3F1 /* Products */ = {
@@ -106,21 +107,6 @@
 			path = "Target Support Files/Pods-Autoescuela";
 			sourceTree = "<group>";
 		};
-		655100770AA6ECF841404EAC7CC9E6A1 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A9CD6E54CA5FA594A5596412038B4EF7 /* AutoEscuelaComponents.modulemap */,
-				E8F3C9D00C66D1DA3ECD7B1551043396 /* AutoEscuelaComponents-dummy.m */,
-				7AFBCE9363B3E35A9F31364ABAE14F81 /* AutoEscuelaComponents-Info.plist */,
-				A36BD5F36771D99278A3AC9D364D5854 /* AutoEscuelaComponents-prefix.pch */,
-				AE4CE33B4D2B3E50B6139A9B9F229559 /* AutoEscuelaComponents-umbrella.h */,
-				2CD842DEEC6B58FB676CE31587E7CD81 /* AutoEscuelaComponents.debug.xcconfig */,
-				40FBAB676BB64DAFEF487CA9B5DF9FE2 /* AutoEscuelaComponents.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/AutoEscuelaComponents";
-			sourceTree = "<group>";
-		};
 		72BD6B9167ED1D9F5764A773ED056F4E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +114,42 @@
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
+		};
+		74BD7D63B1AF47F3526DC7A1E43C1649 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				311776CCDFE0A9F88B0B8421745481A0 /* AutoEscuelaComponents.modulemap */,
+				5206BF547F0D7DC6EB6C456FF7BB2F18 /* AutoEscuelaComponents-dummy.m */,
+				86E9906C92D92CAD62ABDE91A697ED4D /* AutoEscuelaComponents-Info.plist */,
+				171DB99DAE1F1AE2F522F191110514A4 /* AutoEscuelaComponents-prefix.pch */,
+				2EE4444167606F3EC69AB6EC8B805247 /* AutoEscuelaComponents-umbrella.h */,
+				640D3C527E31DC61446DC0914408DBF9 /* AutoEscuelaComponents.debug.xcconfig */,
+				32612774738C2D4C922B141FC6CFDDE9 /* AutoEscuelaComponents.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../../../../AutoescuelaIOS/Autoescuela/Pods/Target Support Files/AutoEscuelaComponents";
+			sourceTree = "<group>";
+		};
+		964B8A5AFE5FD3CB33ED98244E6F3ED0 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				663581B3E7CBCB289D97FA12D1B14A9E /* AutoEscuelaComponents.podspec */,
+				3309B623E7F9A471BB1E6ECCA6CA3D13 /* LICENSE */,
+				24CC8CE1477C34C240ADF5AF3D4B5DA2 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		A08888400B19587BD079846CB889C72B /* AutoEscuelaComponents */ = {
+			isa = PBXGroup;
+			children = (
+				CAD8597AF3B79D02B686D38C74B76353 /* TestClass.swift */,
+				964B8A5AFE5FD3CB33ED98244E6F3ED0 /* Pod */,
+				74BD7D63B1AF47F3526DC7A1E43C1649 /* Support Files */,
+			);
+			name = AutoEscuelaComponents;
+			path = /Users/user159106/Documents/Libraries/AutoEscuelaComponents/AutoEscuelaComponents;
+			sourceTree = "<absolute>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
 			isa = PBXGroup;
@@ -141,8 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				3E49C9218671A0D4D8DFAB6DACD429D4 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				E344800C22530C7B425424597040CC1F /* Pods */,
 				40D6EE3559A351866C89E457623DE3F1 /* Products */,
 				72BD6B9167ED1D9F5764A773ED056F4E /* Targets Support Files */,
 			);
@@ -154,14 +176,6 @@
 				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E344800C22530C7B425424597040CC1F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0561B88D2A9287FB1F428F4EE328F8C6 /* AutoEscuelaComponents */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +247,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -437,7 +451,7 @@
 		};
 		803B518C94A0C440C9707D1BAF8D6064 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40FBAB676BB64DAFEF487CA9B5DF9FE2 /* AutoEscuelaComponents.release.xcconfig */;
+			baseConfigurationReference = 32612774738C2D4C922B141FC6CFDDE9 /* AutoEscuelaComponents.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -474,7 +488,7 @@
 		};
 		ADB55AF24212B7131078BBC643BBAEA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CD842DEEC6B58FB676CE31587E7CD81 /* AutoEscuelaComponents.debug.xcconfig */;
+			baseConfigurationReference = 640D3C527E31DC61446DC0914408DBF9 /* AutoEscuelaComponents.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";

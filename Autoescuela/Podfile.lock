@@ -1,16 +1,16 @@
 PODS:
-  - AutoEscuelaComponents (0.1.0)
+  - AutoEscuelaComponents (0.1.1)
 
 DEPENDENCIES:
-  - AutoEscuelaComponents (= 0.1.0)
+  - AutoEscuelaComponents (from `/Users/user159106/Documents/Libraries/AutoEscuelaComponents/AutoEscuelaComponents`)
 
-SPEC REPOS:
-  https://github.com/Apostol123/AutoEscuelaComponenetsPodSpec.git:
-    - AutoEscuelaComponents
+EXTERNAL SOURCES:
+  AutoEscuelaComponents:
+    :path: "/Users/user159106/Documents/Libraries/AutoEscuelaComponents/AutoEscuelaComponents"
 
 SPEC CHECKSUMS:
-  AutoEscuelaComponents: 3e6d2cfbd0e43b5697564393c08e3aa31bc0cdf9
+  AutoEscuelaComponents: 3fbc4653222c990d909a7371143ce842de05d4d3
 
-PODFILE CHECKSUM: 2560c879ea4075c84b928ab676cb6752a4f2d6d2
+PODFILE CHECKSUM: c059b010208df45fe7711b851d71e4167f654acc
 
 COCOAPODS: 1.9.1
