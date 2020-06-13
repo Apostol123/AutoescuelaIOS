@@ -9,5 +9,6 @@ target 'Autoescuela' do
 
   # Pods for Autoescuela
   pod 'AutoEscuelaComponents', :path => '/Users/user159106/Documents/Libraries/AutoEscuelaComponents/AutoEscuelaComponents'
+  pod 'Firebase/Auth'
 
 end

@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             appCoordinator.start()
             window?.makeKeyAndVisible()
         
+        FirebaseApp.configure()
         return true
     }
 
