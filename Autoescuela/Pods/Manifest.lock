@@ -1,0 +1,16 @@
+PODS:
+  - AutoEscuelaComponents (0.1.2)
+
+DEPENDENCIES:
+  - AutoEscuelaComponents (from `/Users/user159106/Documents/Libraries/AutoEscuelaComponents/AutoEscuelaComponents`)
+
+EXTERNAL SOURCES:
+  AutoEscuelaComponents:
+    :path: "/Users/user159106/Documents/Libraries/AutoEscuelaComponents/AutoEscuelaComponents"
+
+SPEC CHECKSUMS:
+  AutoEscuelaComponents: f13cf658321df044904aa2b3c4d3e2751ad1abbf
+
+PODFILE CHECKSUM: c059b010208df45fe7711b851d71e4167f654acc
+
+COCOAPODS: 1.9.1

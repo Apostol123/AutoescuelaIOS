@@ -1,0 +1,13 @@
+
+source "https://github.com/Apostol123/AutoEscuelaComponenetsPodSpec.git"
+source "https://github.com/Apostol123/AutoEscuelaComponents.git"
+source "https://github.com/CocoaPods/Specs.git"
+
+target 'Autoescuela' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Autoescuela
+  pod 'AutoEscuelaComponents', :path => '/Users/user159106/Documents/Libraries/AutoEscuelaComponents/AutoEscuelaComponents'
+
+end

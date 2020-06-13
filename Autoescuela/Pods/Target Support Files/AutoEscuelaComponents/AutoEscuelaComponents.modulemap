@@ -1,0 +1,6 @@
+framework module AutoEscuelaComponents {
+  umbrella header "AutoEscuelaComponents-umbrella.h"
+
+  export *
+  module * { export * }
+}

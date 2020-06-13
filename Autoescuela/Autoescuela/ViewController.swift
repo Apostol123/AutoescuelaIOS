@@ -7,13 +7,12 @@
 //
 
 import UIKit
-
+import AutoEscuelaComponents
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .systemRed
-        
     }
 
 
