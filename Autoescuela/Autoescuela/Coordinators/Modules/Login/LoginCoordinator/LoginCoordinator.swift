@@ -27,7 +27,8 @@ class LoginCoordinator: Coordinator {
         self.currentState = .initial
     }
     func start() {
-        
+        currentState = .initial
+        loop()
     }
     
     func loop() {
