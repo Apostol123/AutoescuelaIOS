@@ -26,6 +26,7 @@ class LoginCoordinator: Coordinator {
         self.navigator = navigator
         self.currentState = .initial
     }
+    
     func start() {
         currentState = .initial
         loop()
@@ -61,7 +62,8 @@ class LoginCoordinator: Coordinator {
     
     
     func goToLogin() {
-        
+        let view = LoginViewController()
+        navigator.present(view, animated: true)
     }
     
     func goToMainMenu() {

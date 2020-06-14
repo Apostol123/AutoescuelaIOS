@@ -21,6 +21,7 @@ public class AppCoordinator: Coordinator {
     
     let navigationController: UINavigationController
     var currentState: AppCoordinatorState
+    var currentCoordintor: Coordinator?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -49,6 +50,7 @@ public class AppCoordinator: Coordinator {
     func next(_ state: AppCoordinatorState) -> AppCoordinatorState {
         switch state {
         case .initial:
+            try! Auth.auth().signOut()
             if Auth.auth().currentUser != nil {
                 return .willShowMainMenuFlow
             } else {
@@ -68,8 +70,7 @@ public class AppCoordinator: Coordinator {
     }
     
     func  goToLoginFlow() {
-        let vc = UIViewController()
-        vc.view.backgroundColor = .systemBlue
-        navigationController.pushViewController(vc, animated: false)
+        currentCoordintor = LoginCoordinator(navigator: navigationController)
+        currentCoordintor?.start()
     }
 }
