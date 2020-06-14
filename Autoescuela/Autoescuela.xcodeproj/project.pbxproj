@@ -15,6 +15,7 @@
 		6D50CA4A248BF50A00E98641 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D50CA49248BF50A00E98641 /* AppCoordinator.swift */; };
 		6D50CA4C248BF51A00E98641 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D50CA4B248BF51A00E98641 /* Coordinator.swift */; };
 		6D557A182495219600436032 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D557A172495219600436032 /* GoogleService-Info.plist */; };
+		6DBB9040249671880018658F /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBB903F249671880018658F /* LoginCoordinator.swift */; };
 		91F676F4892FA830B475065C /* Pods_Autoescuela.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5859D6106E9A3E52D69144EC /* Pods_Autoescuela.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		6D50CA49248BF50A00E98641 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		6D50CA4B248BF51A00E98641 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		6D557A172495219600436032 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6DBB903F249671880018658F /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		C25A5D5E7AE4BAACD78A428C /* Pods-Autoescuela.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Autoescuela.debug.xcconfig"; path = "Target Support Files/Pods-Autoescuela/Pods-Autoescuela.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,9 +93,34 @@
 		6D50CA4D248BF5BB00E98641 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				6DBB903D249671690018658F /* Modules */,
 				6D50CA48248BF4D800E98641 /* AppCoordinator */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		6DBB903C249671540018658F /* LoginCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				6DBB903F249671880018658F /* LoginCoordinator.swift */,
+			);
+			path = LoginCoordinator;
+			sourceTree = "<group>";
+		};
+		6DBB903D249671690018658F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				6DBB903E249671700018658F /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		6DBB903E249671700018658F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6DBB903C249671540018658F /* LoginCoordinator */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		6E9AB3FE828364AAC777874D /* Pods */ = {
@@ -228,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DBB9040249671880018658F /* LoginCoordinator.swift in Sources */,
 				6D50CA4A248BF50A00E98641 /* AppCoordinator.swift in Sources */,
 				6D375F90248BDFA100A7B372 /* ViewController.swift in Sources */,
 				6D50CA4C248BF51A00E98641 /* Coordinator.swift in Sources */,
