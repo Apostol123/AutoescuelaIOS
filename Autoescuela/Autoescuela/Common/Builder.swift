@@ -10,6 +10,6 @@ import UIKit
 
  protocol Builder {
     
-    func build() -> ViewController
+    func build() -> UIViewController
 }
 

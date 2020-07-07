@@ -63,7 +63,8 @@ class LoginCoordinator: Coordinator {
     
     func goToLogin() {
         let view = LoginViewController()
-        navigator.present(view, animated: true)
+        let navigationController = UINavigationController(rootViewController: view)
+        navigator.pushViewController(view, animated: true)
     }
     
     func goToMainMenu() {

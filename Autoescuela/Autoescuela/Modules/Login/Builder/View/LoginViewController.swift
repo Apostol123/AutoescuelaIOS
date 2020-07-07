@@ -8,6 +8,24 @@
 
 import UIKit
 
-class LoginViewController: ViewController {
+class LoginViewController: UIViewController {
     
+    
+    @IBOutlet var loginButton: UIButton!
+    
+    
+    @IBOutlet var registerButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupNavigationBar()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+      
+    }
+    
+    func setupNavigationBar() {
+        self.navigationController?.navigationBar.isHidden = true
+    }
 }

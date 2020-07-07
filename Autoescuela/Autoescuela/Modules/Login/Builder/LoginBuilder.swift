@@ -6,7 +6,7 @@
 //  Copyright © 2020 user159106. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class LoginBuilder: Builder {
     
@@ -14,7 +14,7 @@ class LoginBuilder: Builder {
         
     }
     
-    func build() -> ViewController {
+    func build() -> UIViewController {
         let view = LoginViewController()
         return view
     }
