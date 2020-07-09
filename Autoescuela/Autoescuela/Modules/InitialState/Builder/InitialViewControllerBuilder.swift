@@ -8,14 +8,16 @@
 
 import UIKit
 
-class LoginBuilder: Builder {
+class InitialViewControllerBuilder: Builder {
     
     init() {
         
     }
     
     func build() -> UIViewController {
-        let view = LoginViewController()
+        let presenter = InitialViewControllerPresenter()
+        let view = InitialViewController(presenter: presenter)
+        presenter.view = view
         return view
     }
 }

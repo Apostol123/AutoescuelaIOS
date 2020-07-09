@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitialViewController" customModule="Autoescuela" customModuleProvider="target">
+            <connections>
+                <outlet property="loginButton" destination="ykb-8t-ciM" id="o5u-KM-CLm"/>
+                <outlet property="registerButton" destination="dto-Au-caQ" id="fUk-Od-r22"/>
+                <outlet property="view" destination="iN0-l3-epB" id="32e-Wv-BWy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Tmb-06-uDI">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="168" translatesAutoresizingMaskIntoConstraints="NO" id="Sgi-kE-HTf">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="480"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="480" id="B74-pR-fhd"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="320" id="Kb8-2H-kix"/>
+                            </constraints>
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQL-iz-lRZ">
+                            <rect key="frame" x="0.0" y="480" width="414" height="416"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mXq-jO-Lgv">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="416"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dto-Au-caQ" customClass="ActionButton" customModule="AutoEscuelaComponents">
+                                            <rect key="frame" x="0.0" y="0.0" width="207" height="416"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ykb-8t-ciM" customClass="ActionButton" customModule="AutoEscuelaComponents">
+                                            <rect key="frame" x="207" y="0.0" width="207" height="416"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="mXq-jO-Lgv" secondAttribute="bottom" id="1jg-xz-0Tl"/>
+                                <constraint firstItem="mXq-jO-Lgv" firstAttribute="leading" secondItem="AQL-iz-lRZ" secondAttribute="leading" id="3a9-wO-lEm"/>
+                                <constraint firstAttribute="height" constant="200" id="8b0-tl-yy5"/>
+                                <constraint firstAttribute="trailing" secondItem="mXq-jO-Lgv" secondAttribute="trailing" id="DFz-N5-MBf"/>
+                                <constraint firstItem="mXq-jO-Lgv" firstAttribute="top" secondItem="AQL-iz-lRZ" secondAttribute="top" id="eHz-5e-LOI"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Tmb-06-uDI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4NJ-wF-Ars"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Tmb-06-uDI" secondAttribute="trailing" id="8Na-GP-NsX"/>
+                <constraint firstAttribute="bottom" secondItem="Tmb-06-uDI" secondAttribute="bottom" id="sIc-UN-buP"/>
+                <constraint firstItem="Tmb-06-uDI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tZF-bv-RBA"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="101"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="168" width="4000" height="4000"/>
+    </resources>
+</document>

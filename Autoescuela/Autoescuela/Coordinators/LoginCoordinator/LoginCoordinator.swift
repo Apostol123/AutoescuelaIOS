@@ -62,9 +62,11 @@ class LoginCoordinator: Coordinator {
     
     
     func goToLogin() {
-        let view = LoginViewController()
+        let view = InitialViewControllerBuilder().build()
         let navigationController = UINavigationController(rootViewController: view)
-        navigator.pushViewController(view, animated: true)
+        view.modalPresentationStyle = .fullScreen
+        navigationController.modalPresentationStyle = .fullScreen
+        navigator.present(navigationController, animated: true)
     }
     
     func goToMainMenu() {
