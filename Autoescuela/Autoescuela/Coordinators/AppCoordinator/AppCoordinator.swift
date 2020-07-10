@@ -97,7 +97,7 @@ public class AppCoordinator: Coordinator {
     }
     
     func  goToInitialFlow() {
-        let view = InitialViewControllerBuilder(coordinatorOutput: { [weak self] oputput in
+        let view = InitialFlowBuilder(coordinatorOutput: { [weak self] oputput in
             switch oputput {
             case .login:
                 self?.currentState = .willShowLoginFlow

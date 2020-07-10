@@ -1,5 +1,5 @@
 //
-//  LoginBuilder.swift
+//  InitialFlowBuilder.swift
 //  Autoescuela
 //
 //  Created by user159106 on 6/14/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InitialViewControllerBuilder: Builder {
+class InitialFlowBuilder: Builder {
     
     var coordinatorOutput: (InitialFlowOutput) -> Void
     

@@ -42,15 +42,9 @@ class InitialViewController: UIViewController {
         registerButton.configure(title: model.registerButtonTitle, action: presenter.didTapRegister)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-      
-    }
-    
     func setupNavigationBar() {
         self.navigationController?.navigationBar.isHidden = true
     }
 }
 
-extension InitialViewController: InitialViewControllerViewProtocol {
-    
-}
+extension InitialViewController: InitialViewControllerViewProtocol {}
