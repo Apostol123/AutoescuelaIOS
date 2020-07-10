@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 public class AppCoordinator: Coordinator {
     
@@ -41,13 +42,18 @@ public class AppCoordinator: Coordinator {
             goToMainMenuFlow()
         case .didShowMainMenuFlow , .didShowLoginFlow , .initial :
             fatalError("Unexpecrted cases")
+        
         }
     }
     
     func next(_ state: AppCoordinatorState) -> AppCoordinatorState {
         switch state {
         case .initial:
-            return .willShowLoginFlow
+            if Auth.auth().currentUser != nil {
+                return .willShowMainMenuFlow
+            } else {
+                return .willShowLoginFlow
+            }
         case .didShowLoginFlow:
             return .willShowMainMenuFlow
         case .didShowMainMenuFlow:
