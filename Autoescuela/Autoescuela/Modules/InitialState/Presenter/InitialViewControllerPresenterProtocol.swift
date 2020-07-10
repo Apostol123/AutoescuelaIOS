@@ -7,6 +7,10 @@
 //
 
 import Foundation
+
 protocol InitialViewControllerPresenterProtocol: class {
-      var model: InitialViewControllerViewModel { get }
+    var model: InitialViewControllerViewModel { get }
+    func didTapLogin()
+    func didTapRegister()
+    
 }

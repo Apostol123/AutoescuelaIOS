@@ -35,11 +35,11 @@ class InitialViewController: UIViewController {
     }
     
     func setupLoginButton() {
-        loginButton.configure(title: "initialView.loginButton.title".localized, action: nil)
+        loginButton.configure(title: model.loginButtonTitile, action: presenter.didTapLogin)
     }
     
     func setUpRegisterButton() {
-         registerButton.configure(title: "initialView.registerButton.title".localized, action: nil)
+        registerButton.configure(title: model.registerButtonTitle, action: presenter.didTapRegister)
     }
     
     override func viewDidAppear(_ animated: Bool) {

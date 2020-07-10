@@ -10,12 +10,14 @@ import UIKit
 
 class InitialViewControllerBuilder: Builder {
     
-    init() {
-        
+    var coordinatorOutput: (InitialFlowOutput) -> Void
+    
+    init(coordinatorOutput: @escaping(InitialFlowOutput) -> Void) {
+        self.coordinatorOutput = coordinatorOutput
     }
     
     func build() -> UIViewController {
-        let presenter = InitialViewControllerPresenter()
+        let presenter = InitialViewControllerPresenter(coordinatorOutput: coordinatorOutput)
         let view = InitialViewController(presenter: presenter)
         presenter.view = view
         return view

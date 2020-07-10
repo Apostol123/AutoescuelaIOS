@@ -82,11 +82,14 @@ public class AppCoordinator: Coordinator {
     }
     
     func goToLoginFlow() {
-        //MARK: ToDo
+        self.currentCoordintor = LoginCoordinator(navigator: navigator)
+        currentCoordintor?.start()
+        
     }
     
     func goToRegisterFlow() {
         //MARK: ToDO
+        print("GoToRegisterFlow")
     }
     
     func goToMainMenuFlow() {
@@ -94,7 +97,17 @@ public class AppCoordinator: Coordinator {
     }
     
     func  goToInitialFlow() {
-        let view = InitialViewControllerBuilder().build()
+        let view = InitialViewControllerBuilder(coordinatorOutput: { [weak self] oputput in
+            switch oputput {
+            case .login:
+                self?.currentState = .willShowLoginFlow
+                self?.loop()
+            case .register:
+                self?.currentState = .willShowRegisterFlow
+                self?.loop()
+            }
+            
+        }).build()
         let navigationController = UINavigationController(rootViewController: view)
         view.modalPresentationStyle = .fullScreen
         navigationController.modalPresentationStyle = .fullScreen
