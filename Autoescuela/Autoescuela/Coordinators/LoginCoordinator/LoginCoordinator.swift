@@ -14,9 +14,7 @@ class LoginCoordinator: Coordinator {
     enum State {
         case initial
         case didShowLoginFlow
-        case willShowRegisterFlow
-        case didShowRegisterFlow
-        case willShowMainMenuFlow
+        case closeFlow
     }
     
     let navigator: UINavigationController
@@ -38,12 +36,10 @@ class LoginCoordinator: Coordinator {
         switch currentState {
         case .initial:
             goToLogin()
+        case .closeFlow:
+            closeFlow()
         case .didShowLoginFlow:
-            goToMainMenu()
-        case .didShowRegisterFlow:
-            goToMainMenu()
-        case .willShowRegisterFlow , .willShowMainMenuFlow:
-        fatalError("UnexptedCases")
+            fatalError("unexpectedCase")
         }
     }
     
@@ -52,24 +48,17 @@ class LoginCoordinator: Coordinator {
         case .initial:
             return .initial
         case .didShowLoginFlow:
-            return .willShowMainMenuFlow
-        case .didShowRegisterFlow:
-            return .willShowMainMenuFlow
-        case .willShowRegisterFlow, .willShowMainMenuFlow:
-            return .initial
+            return .closeFlow
+        case .closeFlow:
+            fatalError("UnexpectedCase")
         }
     }
     
-    
     func goToLogin() {
-        let view = InitialViewControllerBuilder().build()
-        let navigationController = UINavigationController(rootViewController: view)
-        view.modalPresentationStyle = .fullScreen
-        navigationController.modalPresentationStyle = .fullScreen
-        navigator.present(navigationController, animated: true)
+       print("ShouldGoToLogin")
     }
     
-    func goToMainMenu() {
+    func closeFlow() {
         
     }
 }
