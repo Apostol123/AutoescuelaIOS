@@ -15,15 +15,20 @@ public class AppCoordinator: Coordinator {
         case initial
         case willShowLoginFlow
         case willShowMainMenuFlow
+        case willShowInitialFlow
+        case didShowInitialFlow(InitialFlowOutput)
         case didShowLoginFlow
         case didShowMainMenuFlow
+        case willShowRegisterFlow
+        case didShowRegisterFlow
     }
     
-    let navigationController: UINavigationController
+    let navigator: UINavigationController
     var currentState: AppCoordinatorState
+    var currentCoordintor: Coordinator?
     
     init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
+        self.navigator = navigationController
         self.currentState = .initial
         
     }
@@ -38,38 +43,74 @@ public class AppCoordinator: Coordinator {
         switch currentState {
         case .willShowLoginFlow:
             goToLoginFlow()
+        case .willShowInitialFlow:
+            goToInitialFlow()
         case .willShowMainMenuFlow:
             goToMainMenuFlow()
-        case .didShowMainMenuFlow , .didShowLoginFlow , .initial :
+        case .willShowRegisterFlow:
+            goToRegisterFlow()
+        case .didShowMainMenuFlow , .didShowLoginFlow , .initial, .didShowInitialFlow, .didShowRegisterFlow :
             fatalError("Unexpecrted cases")
-        
         }
     }
     
     func next(_ state: AppCoordinatorState) -> AppCoordinatorState {
         switch state {
         case .initial:
+            try! Auth.auth().signOut()
             if Auth.auth().currentUser != nil {
                 return .willShowMainMenuFlow
             } else {
-                return .willShowLoginFlow
+                return .willShowInitialFlow
             }
         case .didShowLoginFlow:
             return .willShowMainMenuFlow
+        case .didShowInitialFlow(let output):
+            switch output {
+            case .login:
+                return .willShowLoginFlow
+            case .register:
+                return .willShowRegisterFlow
+            }
+        case .didShowRegisterFlow:
+            return .willShowMainMenuFlow
         case .didShowMainMenuFlow:
-            return .willShowLoginFlow
-        case .willShowLoginFlow ,.willShowMainMenuFlow:
+            return .initial
+        case .willShowLoginFlow ,.willShowMainMenuFlow, .willShowInitialFlow, .willShowRegisterFlow:
             return state
         }
     }
     
-    func goToMainMenuFlow() {
-        //WORK IN PROGRESS
+    func goToLoginFlow() {
+        self.currentCoordintor = LoginCoordinator(navigator: navigator)
+        currentCoordintor?.start()
+        
     }
     
-    func  goToLoginFlow() {
-        let vc = UIViewController()
-        vc.view.backgroundColor = .systemBlue
-        navigationController.pushViewController(vc, animated: false)
+    func goToRegisterFlow() {
+        //MARK: ToDO
+        print("GoToRegisterFlow")
+    }
+    
+    func goToMainMenuFlow() {
+        //MARK: WORK IN PROGRESS
+    }
+    
+    func  goToInitialFlow() {
+        let view = InitialFlowBuilder(coordinatorOutput: { [weak self] oputput in
+            switch oputput {
+            case .login:
+                self?.currentState = .willShowLoginFlow
+                self?.loop()
+            case .register:
+                self?.currentState = .willShowRegisterFlow
+                self?.loop()
+            }
+            
+        }).build()
+        let navigationController = UINavigationController(rootViewController: view)
+        view.modalPresentationStyle = .fullScreen
+        navigationController.modalPresentationStyle = .fullScreen
+        navigator.present(navigationController, animated: true)
     }
 }

@@ -11,3 +11,10 @@ import Foundation
 public protocol Coordinator {
     func start()
 }
+
+
+extension String {
+    var localized: String {
+        return NSLocalizedString(self, comment: "")
+    }
+}

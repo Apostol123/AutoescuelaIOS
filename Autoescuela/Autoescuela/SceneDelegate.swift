@@ -11,7 +11,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    
+    var currentCoordinator: Coordinator?
     
     @available(iOS 13.0, *)
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -22,9 +22,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         let navigationController = UINavigationController()
         window?.rootViewController = navigationController
-        let appCoordinator = AppCoordinator(navigationController: navigationController)
-        appCoordinator.start()
         window?.makeKeyAndVisible()
+        currentCoordinator = AppCoordinator(navigationController: navigationController)
+        currentCoordinator?.start()
         
     }
     
