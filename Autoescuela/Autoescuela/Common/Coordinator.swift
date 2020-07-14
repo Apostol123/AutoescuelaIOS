@@ -6,7 +6,7 @@
 //  Copyright © 2020 user159106. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public protocol Coordinator {
     func start()
@@ -16,5 +16,15 @@ public protocol Coordinator {
 extension String {
     var localized: String {
         return NSLocalizedString(self, comment: "")
+    }
+}
+
+extension UIView {
+    func fill(view : UIView) {
+
+        leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 }
