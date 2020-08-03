@@ -92,6 +92,7 @@ public class AppCoordinator: Coordinator {
         print("GoToRegisterFlow")
         let viewController = RegisterViewController()
         navigator.pushViewController(viewController, animated: true)
+        
     }
     
     func goToMainMenuFlow() {
@@ -109,7 +110,6 @@ public class AppCoordinator: Coordinator {
                 self?.currentState = .willShowRegisterFlow
                 self?.loop()
             }
-
         }).build()
 
         view.modalPresentationStyle = .fullScreen
