@@ -94,15 +94,35 @@ class RegisterViewController: UIViewController {
     }
     
     func configureLabels() {
-        nameListItem.listItemText.addTarget(self, action: #selector(clearHint), for: .editingDidBegin)
+        nameListItem.listItemText.addTarget(self, action: #selector(nameListItemManagement), for: .editingDidBegin)
+        surnameListItem.listItemText.addTarget(self, action: #selector(surnameLabelManagement), for: .editingDidBegin)
+        emailListItem.listItemText.addTarget(self, action: #selector(emailListItemManagement), for: .editingDidBegin)
+        passwordListItem.listItemText.addTarget(self, action: #selector(passwordListItemManagement), for: .editingDidBegin)
+        repeatpasswordListItem.listItemText.addTarget(self, action: #selector(repeatPassowordListItemManagement), for: .editingDidBegin)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
     
-    @objc func clearHint() {
+    @objc func nameListItemManagement() {
         nameListItem.listItemText.customDelegate?.clearHint()
+    }
+    
+    @objc func surnameLabelManagement() {
+        surnameListItem.listItemText.customDelegate?.clearHint()
+    }
+    
+    @objc func emailListItemManagement() {
+        emailListItem.listItemText.customDelegate?.clearHint()
+    }
+    
+    @objc func passwordListItemManagement() {
+        passwordListItem.listItemText.customDelegate?.clearHint()
+    }
+    
+    @objc func repeatPassowordListItemManagement() {
+        repeatpasswordListItem.listItemText.customDelegate?.clearHint()
     }
     
     public init() {
