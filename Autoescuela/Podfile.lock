@@ -1,5 +1,5 @@
 PODS:
-  - AutoEscuelaComponents (3.0.1):
+  - AutoEscuelaComponents (3.0.2):
     - Reusable (~> 4.1.1)
   - Firebase/Auth (6.29.0):
     - Firebase/CoreOnly
@@ -72,7 +72,7 @@ EXTERNAL SOURCES:
     :path: "/Users/user159106/Documents/Libraries/AutoEscuelaComponents/AutoEscuelaComponents"
 
 SPEC CHECKSUMS:
-  AutoEscuelaComponents: 75ab9f1ba5406ce5d0197ef72a76544af9b331e6
+  AutoEscuelaComponents: 1bcbf6ba88bd60625711e05ac207ca87a6f81996
   Firebase: 57957c8d6eb3d8b80a560b1dc58be24724b89ff2
   FirebaseAuth: a818d73466d51db897d3bf3c0f3baa3dae7fd4c0
   FirebaseCore: 7930a1946517d94256d857f97371ed993b55f7bd

@@ -15,6 +15,7 @@ class RegisterViewController: UIViewController {
         let stackView = UIStackView(frame: .zero)
         stackView.axis = .vertical
         stackView.distribution = .fill
+        stackView.alignment = .fill
         return stackView
     }()
     
@@ -63,7 +64,13 @@ class RegisterViewController: UIViewController {
     lazy var submitButton: ActionButton = {
         let actionButton = ActionButton(frame: .zero)
         actionButton.configure(title: "Submit", action: nil)
+        actionButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
         return actionButton
+    }()
+    
+    lazy var freeSpaceView: UIView = {
+        let view = UIView(frame: .zero)
+        return view
     }()
     
     override func viewDidLoad() {
@@ -83,13 +90,14 @@ class RegisterViewController: UIViewController {
             mainStackView.topAnchor.constraint(equalTo: view.topAnchor, constant: navigationController!.navigationBar.frame.height + 40).isActive = true
             mainStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
             mainStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-            mainStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+            mainStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -38).isActive = true
             mainStackView.addArrangedSubview(titleLabelContainer)
             mainStackView.addArrangedSubview(nameListItem)
             mainStackView.addArrangedSubview(surnameListItem)
             mainStackView.addArrangedSubview(emailListItem)
             mainStackView.addArrangedSubview(passwordListItem)
             mainStackView.addArrangedSubview(repeatpasswordListItem)
+            mainStackView.addArrangedSubview(freeSpaceView)
             mainStackView.addArrangedSubview(submitButton)
     }
     
