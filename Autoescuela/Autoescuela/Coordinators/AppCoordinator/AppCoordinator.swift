@@ -90,6 +90,9 @@ public class AppCoordinator: Coordinator {
     func goToRegisterFlow() {
         //MARK: ToDO
         print("GoToRegisterFlow")
+        let viewController = RegisterViewBuilder().build()
+        navigator.pushViewController(viewController, animated: true)
+        
     }
     
     func goToMainMenuFlow() {
@@ -97,6 +100,7 @@ public class AppCoordinator: Coordinator {
     }
     
     func  goToInitialFlow() {
+        
         let view = InitialFlowBuilder(coordinatorOutput: { [weak self] oputput in
             switch oputput {
             case .login:
@@ -106,11 +110,9 @@ public class AppCoordinator: Coordinator {
                 self?.currentState = .willShowRegisterFlow
                 self?.loop()
             }
-            
         }).build()
-        let navigationController = UINavigationController(rootViewController: view)
+
         view.modalPresentationStyle = .fullScreen
-        navigationController.modalPresentationStyle = .fullScreen
-        navigator.present(navigationController, animated: true)
+        navigator.pushViewController(view, animated: true)
     }
 }
