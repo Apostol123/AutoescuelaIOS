@@ -14,4 +14,4 @@
 "registerView.emailListItem.hint" = "Correo";
 "registerView.passwordListItem.hint" = "Contraseña";
 "registerView.repeatPasswordListItem.hint" = "Repite tu contraseña";
-"registerView.button.title" = "Enviar"
+"registerView.button.title" = "Enviar";

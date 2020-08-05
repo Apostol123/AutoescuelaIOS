@@ -11,6 +11,9 @@ import AutoEscuelaComponents
 
 class RegisterViewController: UIViewController {
     
+    let presenter: RegisterViewPresenterProtocol
+    let model: RegisterViewModel
+    
     lazy var mainStackView: UIStackView = {
         let stackView = UIStackView(frame: .zero)
         stackView.axis = .vertical
@@ -21,7 +24,7 @@ class RegisterViewController: UIViewController {
     
     lazy var titleLabel: TitleLabel = {
         let titleLabel = TitleLabel(frame: .zero)
-        titleLabel.configure(text: "Enter your data")
+        titleLabel.configure(text: model.description)
         return titleLabel
     }()
     
@@ -33,37 +36,37 @@ class RegisterViewController: UIViewController {
     
     lazy var nameListItem: ListItemView = {
         let nameListItem = ListItemView(frame: .zero)
-        nameListItem.configureLabel(text: "", hint: "Name")
+        nameListItem.configureLabel(text: "", hint: model.nameListItemHint)
         return nameListItem
     }()
     
     lazy var surnameListItem: ListItemView = {
         let surnameListItem = ListItemView(frame: .zero)
-        surnameListItem.configureLabel(text: "", hint: "Surname")
+        surnameListItem.configureLabel(text: "", hint: model.surnameListItemHint)
         return surnameListItem
     }()
     
     lazy var emailListItem: ListItemView = {
         let emailListitem = ListItemView(frame: .zero)
-        emailListitem.configureLabel(text: "", hint: "Email")
+        emailListitem.configureLabel(text: "", hint: model.emailListItemHint)
         return emailListitem
     }()
     
     lazy var passwordListItem: ListItemView = {
         let passwordListItem = ListItemView(frame: .zero)
-        passwordListItem.configureLabel(text: "", hint: "Password")
+        passwordListItem.configureLabel(text: "", hint: model.passwordListItemHint)
         return passwordListItem
     }()
     
     lazy var repeatpasswordListItem: ListItemView = {
         let repeatPasswordListItem = ListItemView(frame: .zero)
-        repeatPasswordListItem.configureLabel(text: "", hint: "Repeat password")
+        repeatPasswordListItem.configureLabel(text: "", hint: model.repeatYourPasswordListItemHint)
         return repeatPasswordListItem
     }()
     
     lazy var submitButton: ActionButton = {
         let actionButton = ActionButton(frame: .zero)
-        actionButton.configure(title: "Submit", action: nil)
+        actionButton.configure(title: model.buttonTitle, action: nil)
         actionButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
         return actionButton
     }()
@@ -77,7 +80,7 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         navigationController?.navigationBar.isHidden = false
-        self.title = "Registrarse"
+        self.title = "initialView.registerButton.title".localized
         
         
         configureStackView()
@@ -133,7 +136,9 @@ class RegisterViewController: UIViewController {
         repeatpasswordListItem.listItemText.customDelegate?.clearHint()
     }
     
-    public init() {
+    public init(presenter: RegisterViewPresenterProtocol) {
+        self.presenter = presenter
+        self.model = presenter.registerViewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -142,3 +147,5 @@ class RegisterViewController: UIViewController {
     }
     
 }
+
+extension RegisterViewController: RegisterViewProtocol {}

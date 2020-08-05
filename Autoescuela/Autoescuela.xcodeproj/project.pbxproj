@@ -21,6 +21,11 @@
 		6D557A182495219600436032 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D557A172495219600436032 /* GoogleService-Info.plist */; };
 		6D7A985024BC950E0034B579 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A984F24BC950E0034B579 /* RegisterViewController.swift */; };
 		6D7C1B2124B855D200CACF06 /* InitialFlowOutpu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7C1B2024B855D200CACF06 /* InitialFlowOutpu.swift */; };
+		6D8D789E24DAA11F001E0680 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D789D24DAA11F001E0680 /* RegisterViewModel.swift */; };
+		6D8D78A024DAA3C0001E0680 /* RegisterViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D789F24DAA3C0001E0680 /* RegisterViewPresenter.swift */; };
+		6D8D78A224DAA3D1001E0680 /* RegisterViewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D78A124DAA3D1001E0680 /* RegisterViewPresenterProtocol.swift */; };
+		6D8D78A424DAA538001E0680 /* RegisterViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D78A324DAA538001E0680 /* RegisterViewBuilder.swift */; };
+		6D8D78A624DAA56F001E0680 /* RegisterViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D78A524DAA56F001E0680 /* RegisterViewProtocol.swift */; };
 		6D9F378324A3686900A4DC37 /* InitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D9F378224A3686900A4DC37 /* InitialViewController.xib */; };
 		6DBB9040249671880018658F /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBB903F249671880018658F /* LoginCoordinator.swift */; };
 		6DBB9046249681BD0018658F /* InitialFlowBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBB9045249681BD0018658F /* InitialFlowBuilder.swift */; };
@@ -50,6 +55,11 @@
 		6D557A172495219600436032 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6D7A984F24BC950E0034B579 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6D7C1B2024B855D200CACF06 /* InitialFlowOutpu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialFlowOutpu.swift; sourceTree = "<group>"; };
+		6D8D789D24DAA11F001E0680 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		6D8D789F24DAA3C0001E0680 /* RegisterViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewPresenter.swift; sourceTree = "<group>"; };
+		6D8D78A124DAA3D1001E0680 /* RegisterViewPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewPresenterProtocol.swift; sourceTree = "<group>"; };
+		6D8D78A324DAA538001E0680 /* RegisterViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewBuilder.swift; sourceTree = "<group>"; };
+		6D8D78A524DAA56F001E0680 /* RegisterViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewProtocol.swift; sourceTree = "<group>"; };
 		6D9F378224A3686900A4DC37 /* InitialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialViewController.xib; sourceTree = "<group>"; };
 		6DBB903F249671880018658F /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		6DBB9045249681BD0018658F /* InitialFlowBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialFlowBuilder.swift; sourceTree = "<group>"; };
@@ -150,9 +160,38 @@
 		6D7A984E24BC94E90034B579 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				6D7A984F24BC950E0034B579 /* RegisterViewController.swift */,
+				6D8D789C24DAA10A001E0680 /* Builder */,
+				6D8D789B24DAA100001E0680 /* Presenter */,
+				6D8D789A24DAA0EF001E0680 /* View */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		6D8D789A24DAA0EF001E0680 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D7A984F24BC950E0034B579 /* RegisterViewController.swift */,
+				6D8D789D24DAA11F001E0680 /* RegisterViewModel.swift */,
+				6D8D78A524DAA56F001E0680 /* RegisterViewProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6D8D789B24DAA100001E0680 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6D8D789F24DAA3C0001E0680 /* RegisterViewPresenter.swift */,
+				6D8D78A124DAA3D1001E0680 /* RegisterViewPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6D8D789C24DAA10A001E0680 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				6D8D78A324DAA538001E0680 /* RegisterViewBuilder.swift */,
+			);
+			path = Builder;
 			sourceTree = "<group>";
 		};
 		6DBB903C249671540018658F /* LoginCoordinator */ = {
@@ -347,6 +386,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D55188724B7621100D0F84C /* InitialViewControllerPresenter.swift in Sources */,
+				6D8D78A224DAA3D1001E0680 /* RegisterViewPresenterProtocol.swift in Sources */,
+				6D8D789E24DAA11F001E0680 /* RegisterViewModel.swift in Sources */,
+				6D8D78A424DAA538001E0680 /* RegisterViewBuilder.swift in Sources */,
 				6DBB904C249682940018658F /* InitialViewController.swift in Sources */,
 				6DBB9040249671880018658F /* LoginCoordinator.swift in Sources */,
 				6D50CA4A248BF50A00E98641 /* AppCoordinator.swift in Sources */,
@@ -357,8 +399,10 @@
 				6DBB9049249681F30018658F /* Builder.swift in Sources */,
 				6D7A985024BC950E0034B579 /* RegisterViewController.swift in Sources */,
 				6D55188424B7595100D0F84C /* InitialViewControllerViewModel.swift in Sources */,
+				6D8D78A624DAA56F001E0680 /* RegisterViewProtocol.swift in Sources */,
 				6D7C1B2124B855D200CACF06 /* InitialFlowOutpu.swift in Sources */,
 				6D55188924B762BD00D0F84C /* InitialViewControllerPresenterProtocol.swift in Sources */,
+				6D8D78A024DAA3C0001E0680 /* RegisterViewPresenter.swift in Sources */,
 				6D55188224B7592300D0F84C /* InitialViewControllerViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

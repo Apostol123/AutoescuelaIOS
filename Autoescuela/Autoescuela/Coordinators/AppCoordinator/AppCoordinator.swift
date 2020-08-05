@@ -90,7 +90,7 @@ public class AppCoordinator: Coordinator {
     func goToRegisterFlow() {
         //MARK: ToDO
         print("GoToRegisterFlow")
-        let viewController = RegisterViewController()
+        let viewController = RegisterViewBuilder().build()
         navigator.pushViewController(viewController, animated: true)
         
     }

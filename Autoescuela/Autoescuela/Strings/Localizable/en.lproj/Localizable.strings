@@ -14,4 +14,4 @@
 "registerView.emailListItem.hint" = "Email";
 "registerView.passwordListItem.hint" = "Password";
 "registerView.repeatPasswordListItem.hint" = "RepeatYourPassword";
-"registerView.button.title" = "Submit"
+"registerView.button.title" = "Submit";
