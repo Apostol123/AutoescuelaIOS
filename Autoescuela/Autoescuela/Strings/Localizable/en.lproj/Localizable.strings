@@ -8,3 +8,10 @@
 
 "initialView.loginButton.title" = "Login";
 "initialView.registerButton.title" = "Register";
+"registerView.titleLabel" = "Enter your data";
+"registerView.nameListItem.hint" = "Name";
+"registerView.surnameListItem.hint" = "Surname";
+"registerView.emailListItem.hint" = "Email";
+"registerView.passwordListItem.hint" = "Password";
+"registerView.repeatPasswordListItem.hint" = "RepeatYourPassword";
+"registerView.button.title" = "Submit"
