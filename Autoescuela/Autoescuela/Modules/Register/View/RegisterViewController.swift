@@ -117,23 +117,23 @@ class RegisterViewController: UIViewController {
     }
     
     @objc func nameListItemManagement() {
-        nameListItem.listItemText.customDelegate?.clearHint()
+        nameListItem.clearHint()
     }
     
     @objc func surnameLabelManagement() {
-        surnameListItem.listItemText.customDelegate?.clearHint()
+        surnameListItem.clearHint()
     }
     
     @objc func emailListItemManagement() {
-        emailListItem.listItemText.customDelegate?.clearHint()
+        emailListItem.clearHint()
     }
     
     @objc func passwordListItemManagement() {
-        passwordListItem.listItemText.customDelegate?.clearHint()
+        passwordListItem.clearHint()
     }
     
     @objc func repeatPassowordListItemManagement() {
-        repeatpasswordListItem.listItemText.customDelegate?.clearHint()
+        repeatpasswordListItem.clearHint()
     }
     
     public init(presenter: RegisterViewPresenterProtocol) {

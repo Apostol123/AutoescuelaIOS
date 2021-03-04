@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071F043925EFEFFA000111A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 071F043825EFEFFA000111A0 /* GoogleService-Info.plist */; };
 		6D375F8C248BDFA100A7B372 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D375F8B248BDFA100A7B372 /* AppDelegate.swift */; };
 		6D375F8E248BDFA100A7B372 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D375F8D248BDFA100A7B372 /* SceneDelegate.swift */; };
 		6D375F95248BDFA300A7B372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D375F94248BDFA300A7B372 /* Assets.xcassets */; };
@@ -18,7 +19,6 @@
 		6D55188424B7595100D0F84C /* InitialViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D55188324B7595100D0F84C /* InitialViewControllerViewModel.swift */; };
 		6D55188724B7621100D0F84C /* InitialViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D55188624B7621100D0F84C /* InitialViewControllerPresenter.swift */; };
 		6D55188924B762BD00D0F84C /* InitialViewControllerPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D55188824B762BD00D0F84C /* InitialViewControllerPresenterProtocol.swift */; };
-		6D557A182495219600436032 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D557A172495219600436032 /* GoogleService-Info.plist */; };
 		6D7A985024BC950E0034B579 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A984F24BC950E0034B579 /* RegisterViewController.swift */; };
 		6D7C1B2124B855D200CACF06 /* InitialFlowOutpu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7C1B2024B855D200CACF06 /* InitialFlowOutpu.swift */; };
 		6D8D789E24DAA11F001E0680 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D789D24DAA11F001E0680 /* RegisterViewModel.swift */; };
@@ -35,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		071F043825EFEFFA000111A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5859D6106E9A3E52D69144EC /* Pods_Autoescuela.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Autoescuela.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E6EE9D4C1EADE64A36DF7D /* Pods-Autoescuela.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Autoescuela.release.xcconfig"; path = "Target Support Files/Pods-Autoescuela/Pods-Autoescuela.release.xcconfig"; sourceTree = "<group>"; };
 		6D375F88248BDFA100A7B372 /* Autoescuela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autoescuela.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,7 +53,6 @@
 		6D55188324B7595100D0F84C /* InitialViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewControllerViewModel.swift; sourceTree = "<group>"; };
 		6D55188624B7621100D0F84C /* InitialViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewControllerPresenter.swift; sourceTree = "<group>"; };
 		6D55188824B762BD00D0F84C /* InitialViewControllerPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewControllerPresenterProtocol.swift; sourceTree = "<group>"; };
-		6D557A172495219600436032 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6D7A984F24BC950E0034B579 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6D7C1B2024B855D200CACF06 /* InitialFlowOutpu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialFlowOutpu.swift; sourceTree = "<group>"; };
 		6D8D789D24DAA11F001E0680 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -101,9 +101,9 @@
 		6D375F8A248BDFA100A7B372 /* Autoescuela */ = {
 			isa = PBXGroup;
 			children = (
+				071F043825EFEFFA000111A0 /* GoogleService-Info.plist */,
 				6D55187924B734CE00D0F84C /* Strings */,
 				6DBB9047249681C30018658F /* Common */,
-				6D557A172495219600436032 /* GoogleService-Info.plist */,
 				6DBB903D249671690018658F /* Modules */,
 				6D50CA4D248BF5BB00E98641 /* Coordinators */,
 				6D375F8B248BDFA100A7B372 /* AppDelegate.swift */,
@@ -330,9 +330,9 @@
 			files = (
 				6D55187D24B7355300D0F84C /* Localizable.strings in Resources */,
 				6D9F378324A3686900A4DC37 /* InitialViewController.xib in Resources */,
+				071F043925EFEFFA000111A0 /* GoogleService-Info.plist in Resources */,
 				6D375F98248BDFA300A7B372 /* LaunchScreen.storyboard in Resources */,
 				6D375F95248BDFA300A7B372 /* Assets.xcassets in Resources */,
-				6D557A182495219600436032 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

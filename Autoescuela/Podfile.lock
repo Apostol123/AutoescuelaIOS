@@ -1,5 +1,5 @@
 PODS:
-  - AutoEscuelaComponents (3.0.2):
+  - AutoEscuelaComponents (3.0.5):
     - Reusable (~> 4.1.1)
   - Firebase/Auth (6.29.0):
     - Firebase/CoreOnly
@@ -51,7 +51,7 @@ PODS:
   - Reusable/View (4.1.1)
 
 DEPENDENCIES:
-  - AutoEscuelaComponents (from `/Users/user159106/Documents/Libraries/AutoEscuelaComponents/AutoEscuelaComponents`)
+  - AutoEscuelaComponents (from `/Users/aual/Desktop/bench/autoescuela/AutoEscuelaComponents`)
   - Firebase/Auth
 
 SPEC REPOS:
@@ -69,10 +69,10 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   AutoEscuelaComponents:
-    :path: "/Users/user159106/Documents/Libraries/AutoEscuelaComponents/AutoEscuelaComponents"
+    :path: "/Users/aual/Desktop/bench/autoescuela/AutoEscuelaComponents"
 
 SPEC CHECKSUMS:
-  AutoEscuelaComponents: 1bcbf6ba88bd60625711e05ac207ca87a6f81996
+  AutoEscuelaComponents: ea13ee6c2f02b7b1dbe1496fc726dab1a7aa934c
   Firebase: 57957c8d6eb3d8b80a560b1dc58be24724b89ff2
   FirebaseAuth: a818d73466d51db897d3bf3c0f3baa3dae7fd4c0
   FirebaseCore: 7930a1946517d94256d857f97371ed993b55f7bd
@@ -84,6 +84,6 @@ SPEC CHECKSUMS:
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
   Reusable: 53a9acf5c536f229b31b5865782414b508252ddb
 
-PODFILE CHECKSUM: bbdfa7805902161a2eb3c5a9dadc03e58af29adf
+PODFILE CHECKSUM: 285053b9a546d1aa50e017623d99734377f246c2
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.8.4

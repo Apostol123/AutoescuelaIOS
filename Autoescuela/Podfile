@@ -8,7 +8,7 @@ target 'Autoescuela' do
   use_frameworks!
 
   # Pods for Autoescuela
-  pod 'AutoEscuelaComponents', :path => '/Users/user159106/Documents/Libraries/AutoEscuelaComponents/AutoEscuelaComponents'
+  pod 'AutoEscuelaComponents', :path => '/Users/aual/Desktop/bench/autoescuela/AutoEscuelaComponents'
   pod 'Firebase/Auth'
 
 end
