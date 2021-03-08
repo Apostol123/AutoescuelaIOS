@@ -10,6 +10,8 @@ import Foundation
 import AutoEscuelaComponents
 
 public protocol RegisterViewPresenterProtocol: class {
-     var registerViewModel: RegisterViewModel { get }
+    var registerViewModel: RegisterViewModel { get }
     func checkPasswords(passwordListItem: [ListItemView]) -> Bool
+    func login(name: String, surname: String, email: String, password: String)
+    func submitButtonPressed(textFields: [ListItemView])
 }

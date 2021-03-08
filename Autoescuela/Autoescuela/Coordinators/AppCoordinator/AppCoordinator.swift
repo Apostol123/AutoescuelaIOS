@@ -50,7 +50,7 @@ public class AppCoordinator: Coordinator {
         case .willShowRegisterFlow:
             goToRegisterFlow()
         case .didShowMainMenuFlow , .didShowLoginFlow , .initial, .didShowInitialFlow, .didShowRegisterFlow :
-            fatalError("Unexpecrted cases")
+            fatalError("Unexpected cases")
         }
     }
     
@@ -90,13 +90,23 @@ public class AppCoordinator: Coordinator {
     func goToRegisterFlow() {
         //MARK: ToDO
         print("GoToRegisterFlow")
-        let viewController = RegisterViewBuilder().build()
+        let viewController = RegisterViewBuilder(coordinatorOutput: { [weak self] result in
+            switch result {
+            
+            case .goToMainMenu:
+                self?.currentState = .didShowRegisterFlow
+                self?.loop()
+            }
+            
+        }).build()
         navigator.pushViewController(viewController, animated: true)
         
     }
     
     func goToMainMenuFlow() {
-        //MARK: WORK IN PROGRESS
+        let vc = UIViewController()
+        vc.view.backgroundColor = .blue
+        navigator.pushViewController(vc, animated: true)
     }
     
     func  goToInitialFlow() {

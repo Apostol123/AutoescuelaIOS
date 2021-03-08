@@ -125,24 +125,24 @@ class RegisterViewController: UIViewController {
     }
     
     @objc func submitButtonPressed() {
-        var passwordsTextField = [ListItemView]()
-        for textField in textFields {
-            if textField.isEmpty {
-                textField.setUpIsError(errorText: model.emptyFieldError)
-            } else {
-                textField.clearErrorLabel()
-            }
-            if textField.listItemText.tag == model.passwordTag || textField.listItemText.tag == model.repeatPasswordTag  {
-                passwordsTextField.append(textField)
-            }
-        }
-        
-        if  !presenter.checkPasswords(passwordListItem: passwordsTextField) {
-            passwordListItem.setUpIsError(errorText: model.passwordDontMachError)
-        } else {
-            passwordListItem.clearErrorLabel()
-        }
+        presenter.submitButtonPressed(textFields: textFields)
     }
 }
 
-extension RegisterViewController: RegisterViewProtocol {}
+extension RegisterViewController: RegisterViewProtocol {
+    
+    func togglePasswordError(errorMessage: String?) {
+        if let errorMessage = errorMessage {
+            passwordListItem.setUpIsError(errorText: errorMessage)
+        } else {
+            if !passwordListItem.isEmpty {
+                passwordListItem.clearErrorLabel()
+            }
+        }
+    }
+    
+    func login() {
+        presenter.login(name: nameListItem.listItemText.text!, surname: surnameListItem.listItemText.text!, email: emailListItem.listItemText.text!, password: passwordListItem.listItemText.text!)
+    }
+}
+

@@ -12,8 +12,12 @@ import AutoEscuelaComponents
 class  RegisterViewPresenter: RegisterViewPresenterProtocol {
 
     weak var view: RegisterViewProtocol?
+    var dataManager: RegisterDataManagerProtocol
+    var coordinatorOutput: (RegisterFlowOutput) -> Void
     
-    init() {
+    init(dataManager: RegisterDataManagerProtocol, coordinatorOutput: @escaping(RegisterFlowOutput) -> Void) {
+        self.dataManager = dataManager
+        self.coordinatorOutput = coordinatorOutput
     }
     
     var registerViewModel: RegisterViewModel {
@@ -29,12 +33,61 @@ class  RegisterViewPresenter: RegisterViewPresenterProtocol {
             passwordTag: 1000,
             repeatPasswordTag: 2000,
             emptyFieldError: "Field is empty",
-            passwordDontMachError: "Password dont match"
+            passwordDontMachError: "Passwords dont match"
         )
     }
     
     func checkPasswords(passwordListItem: [ListItemView]) -> Bool {
         return passwordListItem[0].listItemText.text == passwordListItem[1].listItemText.text
     }
+    
+    func submitButtonPressed(textFields: [ListItemView]) {
+        var passwordsTextField = [ListItemView]()
+        var validationHelper = RegisterViewValidationHelper()
+        for textField in textFields {
+            if textField.isEmpty {
+                textField.setUpIsError(errorText:registerViewModel.emptyFieldError)
+                validationHelper.allFieldsAreFilled = false
+            } else {
+                textField.clearErrorLabel()
+            }
+            if textField.listItemText.tag == registerViewModel.passwordTag || textField.listItemText.tag == registerViewModel.repeatPasswordTag  {
+                passwordsTextField.append(textField)
+            }
+        }
+        
+        if  !checkPasswords(passwordListItem: passwordsTextField) {
+            validationHelper.passwordMatch = false
+            view?.togglePasswordError(errorMessage: registerViewModel.passwordDontMachError)
+        } else {
+            view?.togglePasswordError(errorMessage: nil)
+        }
+        if validationHelper.isReadyToLogin {
+            view?.login()
+        }
+    }
+    
+    func login(name: String, surname: String, email: String, password: String) {
+        let user = AutoEscuelaUser(name: name, surname: surname, password: password, email: email)
+        dataManager.addUser(user: user) { (result) in
+            switch result {
+            case .success(let user):
+                self.coordinatorOutput(.goToMainMenu)
+            case .failure(let error):
+                self.view?.show(errorMessage: error.localizedDescription)
+            }
+        }
+    }
    
+}
+
+struct RegisterViewValidationHelper {
+    var allFieldsAreFilled = true
+    var passwordMatch = true
+    
+    var isReadyToLogin: Bool {
+        get {
+            return allFieldsAreFilled && passwordMatch
+        }
+    }
 }

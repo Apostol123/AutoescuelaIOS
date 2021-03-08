@@ -8,4 +8,8 @@
 
 import Foundation
 
-protocol RegisterViewProtocol: class {}
+protocol RegisterViewProtocol: class, ViewControllerErrorAlert {
+    
+    func togglePasswordError(errorMessage: String?)
+    func login()
+}
