@@ -17,4 +17,8 @@ public struct RegisterViewModel {
     var emailListItemHint: String
     var passwordListItemHint: String
     var repeatYourPasswordListItemHint: String
+    var passwordTag: Int
+    var repeatPasswordTag: Int
+    var emptyFieldError: String
+    var passwordDontMachError: String
 }

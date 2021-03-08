@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import AutoEscuelaComponents
 
 public protocol RegisterViewPresenterProtocol: class {
      var registerViewModel: RegisterViewModel { get }
+    func checkPasswords(passwordListItem: [ListItemView]) -> Bool
 }

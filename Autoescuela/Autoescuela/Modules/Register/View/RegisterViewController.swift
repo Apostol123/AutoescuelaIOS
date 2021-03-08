@@ -13,6 +13,7 @@ class RegisterViewController: UIViewController {
     
     let presenter: RegisterViewPresenterProtocol
     let model: RegisterViewModel
+    var textFields = [ListItemView]()
     
     lazy var mainStackView: UIStackView = {
         let stackView = UIStackView(frame: .zero)
@@ -36,37 +37,39 @@ class RegisterViewController: UIViewController {
     
     lazy var nameListItem: ListItemView = {
         let nameListItem = ListItemView(frame: .zero)
-        nameListItem.configureLabel(text: "", hint: model.nameListItemHint)
+        nameListItem.configureLabel(text: nil, placeholder: model.nameListItemHint)
         return nameListItem
     }()
     
     lazy var surnameListItem: ListItemView = {
         let surnameListItem = ListItemView(frame: .zero)
-        surnameListItem.configureLabel(text: "", hint: model.surnameListItemHint)
+        surnameListItem.configureLabel(text: nil, placeholder: model.surnameListItemHint)
         return surnameListItem
     }()
     
     lazy var emailListItem: ListItemView = {
         let emailListitem = ListItemView(frame: .zero)
-        emailListitem.configureLabel(text: "", hint: model.emailListItemHint)
+        emailListitem.configureLabel(text: nil, placeholder: model.emailListItemHint)
         return emailListitem
     }()
     
     lazy var passwordListItem: ListItemView = {
         let passwordListItem = ListItemView(frame: .zero)
-        passwordListItem.configureLabel(text: "", hint: model.passwordListItemHint)
+        passwordListItem.listItemText.tag = model.passwordTag
+        passwordListItem.configureLabel(text: nil, placeholder: model.passwordListItemHint, isSecure: true)
         return passwordListItem
     }()
     
     lazy var repeatpasswordListItem: ListItemView = {
         let repeatPasswordListItem = ListItemView(frame: .zero)
-        repeatPasswordListItem.configureLabel(text: "", hint: model.repeatYourPasswordListItemHint)
+        repeatPasswordListItem.listItemText.tag = model.repeatPasswordTag
+        repeatPasswordListItem.configureLabel(text: nil, placeholder: model.repeatYourPasswordListItemHint, isSecure: true)
         return repeatPasswordListItem
     }()
     
     lazy var submitButton: ActionButton = {
         let actionButton = ActionButton(frame: .zero)
-        actionButton.configure(title: model.buttonTitle, action: nil)
+        actionButton.configure(title: model.buttonTitle, action: submitButtonPressed)
         actionButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
         return actionButton
     }()
@@ -81,10 +84,13 @@ class RegisterViewController: UIViewController {
         view.backgroundColor = .white
         navigationController?.navigationBar.isHidden = false
         self.title = "initialView.registerButton.title".localized
-        
+        textFields.append(nameListItem)
+        textFields.append(surnameListItem)
+        textFields.append(emailListItem)
+        textFields.append(passwordListItem)
+        textFields.append(repeatpasswordListItem)
         
         configureStackView()
-        configureLabels()
     }
         
         func configureStackView() {
@@ -104,36 +110,8 @@ class RegisterViewController: UIViewController {
             mainStackView.addArrangedSubview(submitButton)
     }
     
-    func configureLabels() {
-        nameListItem.listItemText.addTarget(self, action: #selector(nameListItemManagement), for: .editingDidBegin)
-        surnameListItem.listItemText.addTarget(self, action: #selector(surnameLabelManagement), for: .editingDidBegin)
-        emailListItem.listItemText.addTarget(self, action: #selector(emailListItemManagement), for: .editingDidBegin)
-        passwordListItem.listItemText.addTarget(self, action: #selector(passwordListItemManagement), for: .editingDidBegin)
-        repeatpasswordListItem.listItemText.addTarget(self, action: #selector(repeatPassowordListItemManagement), for: .editingDidBegin)
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-    }
-    
-    @objc func nameListItemManagement() {
-        nameListItem.clearHint()
-    }
-    
-    @objc func surnameLabelManagement() {
-        surnameListItem.clearHint()
-    }
-    
-    @objc func emailListItemManagement() {
-        emailListItem.clearHint()
-    }
-    
-    @objc func passwordListItemManagement() {
-        passwordListItem.clearHint()
-    }
-    
-    @objc func repeatPassowordListItemManagement() {
-        repeatpasswordListItem.clearHint()
     }
     
     public init(presenter: RegisterViewPresenterProtocol) {
@@ -146,6 +124,25 @@ class RegisterViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    @objc func submitButtonPressed() {
+        var passwordsTextField = [ListItemView]()
+        for textField in textFields {
+            if textField.isEmpty {
+                textField.setUpIsError(errorText: model.emptyFieldError)
+            } else {
+                textField.clearErrorLabel()
+            }
+            if textField.listItemText.tag == model.passwordTag || textField.listItemText.tag == model.repeatPasswordTag  {
+                passwordsTextField.append(textField)
+            }
+        }
+        
+        if  !presenter.checkPasswords(passwordListItem: passwordsTextField) {
+            passwordListItem.setUpIsError(errorText: model.passwordDontMachError)
+        } else {
+            passwordListItem.clearErrorLabel()
+        }
+    }
 }
 
 extension RegisterViewController: RegisterViewProtocol {}
