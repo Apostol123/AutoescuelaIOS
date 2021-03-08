@@ -88,8 +88,6 @@ public class AppCoordinator: Coordinator {
     }
     
     func goToRegisterFlow() {
-        //MARK: ToDO
-        print("GoToRegisterFlow")
         let viewController = RegisterViewBuilder(coordinatorOutput: { [weak self] result in
             switch result {
             
