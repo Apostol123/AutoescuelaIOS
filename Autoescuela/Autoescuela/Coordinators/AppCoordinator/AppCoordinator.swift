@@ -82,8 +82,12 @@ public class AppCoordinator: Coordinator {
     }
     
     func goToLoginFlow() {
-        self.currentCoordintor = LoginCoordinator(navigator: navigator)
-        currentCoordintor?.start()
+//        self.currentCoordintor = LoginCoordinator(navigator: navigator)
+//        currentCoordintor?.start()
+        let presenter = LoginViewPresenter()
+        let viewController = LoginViewController(presenter: presenter)
+       
+        navigator.pushViewController(viewController, animated: true)
         
     }
     
