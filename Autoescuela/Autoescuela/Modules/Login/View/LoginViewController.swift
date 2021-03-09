@@ -40,7 +40,7 @@ class LoginViewController: UIViewController {
     
     lazy var button: UIView = {
         let button = ActionButton(frame: .zero)
-        button.configure(title: model.buttonTitle, action: nil)
+        button.configure(title: model.buttonTitle, action: submit)
         let view = UIView(frame: .zero)
         view.fill(view: button)
         return view
@@ -76,10 +76,9 @@ class LoginViewController: UIViewController {
         return emailInput
     }()
     
-    lazy var passwordInput : UIView = {
+    lazy var passwordInput : ListItemView = {
         let passwordInput = ListItemView(frame: .zero)
         passwordInput.configureLabel(text: nil, placeholder: model.passwordPlaceHolder, isSecure: true)
-        let view = UIView(frame: .zero)
         return passwordInput
     }()
     
@@ -140,6 +139,10 @@ class LoginViewController: UIViewController {
         
     }
     
+    @objc func submit() {
+        presenter.submitPressed(inputs: [emailInput,passwordInput])
+    }
+    
     public init(presenter: LoginViewPresenterProtocol) {
         self.presenter = presenter
         self.model = presenter.model
@@ -149,5 +152,9 @@ class LoginViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+}
+
+extension LoginViewController: LoginViewProtocol {
     
 }

@@ -6,10 +6,12 @@
 //  Copyright © 2021 user159106. All rights reserved.
 //
 
-import Foundation
+import AutoEscuelaComponents
 
 protocol LoginViewPresenterProtocol {
     var model: LoginViewModel {
         get
     }
+    
+    func submitPressed(inputs: [ListItemView])
 }

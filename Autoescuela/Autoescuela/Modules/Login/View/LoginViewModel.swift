@@ -19,4 +19,5 @@ struct LoginViewModel {
     let passwordTitle: String
     let passwordPlaceHolder: String
     let buttonTitle: String
+    let emptyFieldError: String
 }
